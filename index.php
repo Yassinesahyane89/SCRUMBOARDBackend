@@ -192,7 +192,7 @@
                             <label class="form-label">Type</label>
                             <div class="ms-3">
                                 <div class="form-check mb-1">
-                                    <input class="form-check-input" name="type" type="radio" value="1" id="task-type-feature" required/>
+                                    <input class="form-check-input" name="type" type="radio" value="1" id="task-type-feature"/>
                                     <label class="form-check-label" for="task-type-feature">Feature</label>
                                 </div>
                                 <div class="form-check">

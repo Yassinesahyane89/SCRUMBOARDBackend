@@ -11,15 +11,13 @@
         global $conn;
         $sql = "SELECT tasks.id ,title ,types.name 'type' ,priorities.name 'priority' , status.name 'status' ,task_datetime,description FROM tasks, status , types, priorities WHERE tasks.status_id = status.id and tasks.priority_id = priorities.id and tasks.type_id = types.id and status.name = '$q'";
         $result = $conn->query($sql);
-        while($row = $result->fetch_assoc()){
-            echo '<pre>';
-              print_r($row);
-              echo '</pre>';
+        if ($result->num_rows > 0) {
+            return $result;
+        }else{
+            return 0;
         }
 
-
     }
-getTasks('Done');
 
     function saveTask()
     {
